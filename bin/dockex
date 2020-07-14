@@ -1,0 +1,11 @@
+#!/bin/bash
+from=$(pwd)
+cd /home/ogos/dockex
+ls -ld .?* | sort | awk 'NR>1' | awk '{print NR, "\t", $9}'
+
+echo ""
+echo "Program?"
+read pos
+
+./$(ls -ld .?* | sort | awk 'NR>1' | awk '{print $9}' |sed -n ${pos}p) $from
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+./.showcont
+echo ""
+echo Choose container
+read containerPos
+containerId=$(sudo docker container ls -q | sed -n ${containerPos}p)
+echo Connecting container ${containerId} ...
+sudo docker exec -it $containerId mysql -u root -p 

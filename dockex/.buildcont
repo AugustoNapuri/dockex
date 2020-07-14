@@ -1,0 +1,1 @@
+sudo docker build -t mysql_db $1

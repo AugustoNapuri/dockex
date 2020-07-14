@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo ""
+sudo docker container ls | sed -n 2,10p | awk '{print NR, "\t", $1,$2}'

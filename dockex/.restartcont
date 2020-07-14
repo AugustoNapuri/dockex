@@ -1,0 +1,7 @@
+#!/bin/bash
+
+./.showcont
+echo Choose container
+read container
+containerId=$(sudo docker container ls -q | sed -n ${container}p)
+sudo docker restart $containerId

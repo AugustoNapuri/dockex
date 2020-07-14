@@ -1,0 +1,2 @@
+cd /home/ogos/Documents/meetups/MeetUps/deployment
+sudo docker-compose down
