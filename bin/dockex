@@ -1,6 +1,6 @@
 #!/bin/bash
 from=$(pwd)
-cd /home/ogos/dockex
+cd /home/$(who | cut -d ' ' -f1)/dockex
 ls -ld .?* | sort | awk 'NR>1' | awk '{print NR, "\t", $9}'
 
 echo ""
