@@ -1,1 +1,3 @@
-sudo docker build -t mysql_db $1
+echo "Tag name"
+read tag
+sudo docker build -t $tag $1

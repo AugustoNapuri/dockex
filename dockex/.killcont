@@ -3,4 +3,6 @@
 ./.showcont
 echo Choose container
 read container
-sudo docker stop $(sudo docker container ls -q | sed -n ${container}p)
+containerId=$(sudo docker container ls -q | sed -n ${container}p)
+echo Stopping container $containerId ...
+sudo docker stop $containerId
